@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 import type { TestOptions } from './test-options';
-
+//TEST GITHUB WIJZIGING
 
 require('dotenv').config();
 
