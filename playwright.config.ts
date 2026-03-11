@@ -40,7 +40,7 @@ export default defineConfig<TestOptions>({
     screenshot: "only-on-failure",
     actionTimeout: 2000,
     navigationTimeout: 25000,
-    headless: false,
+    headless: true,
     video: {
       mode: 'off',
       size: {width: 1920, height: 1080}
