@@ -15,14 +15,14 @@ export default defineConfig<TestOptions>({
   
   //reporter: 'list',
   reporter:[
-    process.env.CI ? ["dot"] : ["list"],
-    [
-      "@argos-ci/playwright/reporter",
-      {
-        // Upload to Argos on CI only.
-        uploadToArgos: !!process.env.CI,
-      },
-    ],
+    // process.env.CI ? ["dot"] : ["list"],
+    // [
+    //   "@argos-ci/playwright/reporter",
+    //   {
+    //     // Upload to Argos on CI only.
+    //     uploadToArgos: !!process.env.CI,
+    //   },
+    // ],
     ['html'],
     ['json', { outputFile: 'test-results/jsonReport.json' }],
     ['junit', { outputFile: 'test-results/junitReport.xml' }]
