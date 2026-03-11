@@ -31,7 +31,8 @@ export default defineConfig<TestOptions>({
   use: {
   
     globalsQaURL: 'https://www.globalsqa.com/demo-site/draganddrop/',
-    baseURL: process.env.DEV === '1' ? 'http://localhost:4201/'
+    // baseURL: process.env.DEV === '1' ? 'http://localhost:4201/'
+    baseURL: process.env.DEV === '1' ? 'http://localhost:4200/'
       : process.env.STAGING == '1' ? 'http://localhost:4202/'
       : 'http://localhost:4200/',
 
@@ -39,7 +40,7 @@ export default defineConfig<TestOptions>({
     screenshot: "only-on-failure",
     actionTimeout: 2000,
     navigationTimeout: 25000,
-    headless: true,
+    headless: false,
     video: {
       mode: 'off',
       size: {width: 1920, height: 1080}
@@ -51,7 +52,8 @@ export default defineConfig<TestOptions>({
       name: 'dev',
       use: {
         ...devices['Desktop Chrome'],
-        baseURL: 'http://localhost:4201/'
+        // baseURL: 'http://localhost:4201/'
+        baseURL: 'http://localhost:4200/'
        },
     },
     
